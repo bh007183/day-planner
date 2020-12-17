@@ -21,7 +21,7 @@ var five = document.querySelector(".five")
 if (hour > "6" && hour < "9"){
     nine.style.backgroundColor = red;
 } else if (hour === "9am"){
-    nine.style.backgroundColor = green;
+    nine.css(backgroundColor = green)
 } else {nine.style.backgroundColor = white;}
 
 if (hour > "6" && hour < "10"){
@@ -55,38 +55,7 @@ if (hour > "6" && hour <= "12"){
 
 if("5am" > "4pm"){console.log(true)}
 
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
-if (hour === "4"){
-    
-    nine.style.backgroundColor = red;
-}
+
 ////////////
 var nine = document.querySelector(".nine")
 
@@ -99,15 +68,20 @@ var nine = document.querySelector(".nine")
 ////////////
 
 var saved = localStorage.getItem("input") || []
-
-
+document.querySelector(".input-1").value = saved
 var button1 = document.querySelector(".btn1")
 
 button1.addEventListener("click", function(){
     
     var input = document.querySelector(".input-1").value
-    localStorage.setItem("input", saved)
     
-    saved.push(input)
+    localStorage.setItem("input", input)
+   
+    console.log(saved)
+    
+    
 })
+
+
+
 

@@ -69,3 +69,17 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+.set {
+  margin-left: 30%;
+}
+div {
+  border-style: solid;
+  border-color: #d3d3d3;
+}
+input {
+  margin-bottom: 2%;
+}
+.col {
+  border-style: solid;
+  border-color: grey;
+}
