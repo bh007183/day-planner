@@ -1,63 +1,85 @@
-var salmon = moment().format('MMMM Do YYYY, h:mm:ss a')
-document.querySelector("#currentDay").textContent = salmon
-var hour = moment().format("h" + "a")
+var salmon = moment().format('MMMM Do YYYY, h:mm a')
+$("#currentDay").text(salmon)
+var hour = moment().format("H")
 console.log(hour)
 console.log(hour)
-
+if (hour ==="8"){console.log(true)}
 var white = "#d3d3d3"
 var red = "#ff6961"
 var green = "#77dd77"
-var nine = document.querySelector(".nine")
-var ten = document.querySelector(".ten")
-var eleven = document.querySelector(".eleven")
-var twelve = document.querySelector(".twelve")
-var one = document.querySelector(".one")
-var two = document.querySelector(".two")
-var three = document.querySelector(".three")
-var four = document.querySelector(".four")
-var five = document.querySelector(".five")
+var nine = $(".nine")
+var ten = $(".ten")
+var eleven = $(".eleven")
+var twelve = $(".twelve")
+var one = $(".one")
+var two = $(".two")
+var three = $(".three")
+var four = $(".four")
+var five = $(".five")
 
 
-if (hour > "6" && hour < "9"){
-    nine.style.backgroundColor = red;
-} else if (hour === "9am"){
-    nine.css(backgroundColor = green)
-} else {nine.style.backgroundColor = white;}
 
-if (hour > "6" && hour < "10"){
-    ten.style.backgroundColor = red;
-} else if (hour === "10am"){
-    ten.style.backgroundColor = green;
-} else {ten.style.backgroundColor = white;}
 
-if (hour > "6" && hour < "11"){
-    eleven.style.backgroundColor = red;
+if (hour > "10"){
+    ten.css("background-color", "#ff6961")
+} else if (hour === "10"){
+    ten.css("background-color", green)
+} else {ten.css("background-color", white)}
+
+
+
+if (hour < "9"){
+    nine.css("background-color", "#ff6961")
+} else if (hour === "9"){
+    nine.css("background-color", green)
+} else {nine.css("background-color", white)}
+
+
+if (hour > "11"){
+    eleven.css("background-color", red)
 } else if (hour === "11am"){
-    eleven.style.backgroundColor = green;
-} else {eleven.style.backgroundColor = white;}
+    eleven.css("background-color", green)
+} else {eleven.css("background-color", white)}
 
-if (hour > "6" && hour < "12"){
-    twelve.style.backgroundColor = red;
+if (hour > "12"){
+    twelve.css("background-color", red)
 } else if (hour === "12am"){
-    twelve.style.backgroundColor = green;
-} else {twelve.style.backgroundColor = white;}
+    twelve.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
+if (hour > "13"){
+    one.css("background-color", red)
+} else if (hour === "13am"){
+    one.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
+if (hour > "14"){
+    two.css("background-color", red)
+} else if (hour === "14am"){
+    two.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
+if (hour > "15"){
+    three.css("background-color", red)
+} else if (hour === "15am"){
+    three.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
+if (hour > "16"){
+    four.css("background-color", red)
+} else if (hour === "16am"){
+    four.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
-function postNoon(clas){
-if (hour > "6" && hour <= "12"){
-    clas.style.backgroundColor = red;
-} else if (hour === "1"){
-    clas.style.backgroundColor = green;
-} else {clas.style.backgroundColor = white;}}
+if (hour > "17"){
+    five.css("background-color", red)
+} else if (hour === "17am"){
+    five.css("background-color", green)
+} else {twelve.css("background-color", white)}
 
-if("5am" > "4pm"){console.log(true)}
 
 
 ////////////
-var nine = document.querySelector(".nine")
 
 
 
@@ -65,22 +87,42 @@ var nine = document.querySelector(".nine")
 
 
 
-////////////
 
-var saved = localStorage.getItem("input") || []
-document.querySelector(".input-1").value = saved
-var button1 = document.querySelector(".btn1")
+////////////SAVE BUTTONS AND STORAGE/////////////////
 
-button1.addEventListener("click", function(){
+
+function assignValue (x){
+var saved = localStorage.getItem("input" + x) || []
+$(".input-" + x).val(saved)
+
+$(".container").on("click", function(event){
+    if (event.target.matches("button")){
+        console.log("yay")
     
-    var input = document.querySelector(".input-1").value
+    var input = $(".input-" + x).val()
     
-    localStorage.setItem("input", input)
+    localStorage.setItem("input" + x, input)
    
     console.log(saved)
     
-    
-})
+}
+
+})}
+
+
+assignValue(1)
+assignValue(2)
+assignValue(3)
+assignValue(4)
+assignValue(5)
+assignValue(6)
+assignValue(7)
+assignValue(8)
+assignValue(9)
+
+
+
+
 
 
 
