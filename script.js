@@ -1,92 +1,32 @@
 var salmon = moment().format('MMMM Do YYYY, h:mm a')
 $("#currentDay").text(salmon)
-var hour = moment().format("H")
+var hour = parseInt(moment().format("H"))
+
 console.log(hour)
-console.log(hour)
+console.log(typeof(hour))
 if (hour ==="8"){console.log(true)}
-var white = "#d3d3d3"
-var red = "#ff6961"
-var green = "#77dd77"
-var nine = $(".nine")
-var ten = $(".ten")
-var eleven = $(".eleven")
-var twelve = $(".twelve")
-var one = $(".one")
-var two = $(".two")
-var three = $(".three")
-var four = $(".four")
-var five = $(".five")
 
+/////////////FUNCTION FOR COMPARING TIME TO COL////////////
 
+function colors(x, y) {
 
+if (hour < y){
+    x.css("background-color", "#ff6961")
+} else if (hour === y){
+    x.css("background-color", "#77dd77")
+} else {x.css("background-color", "#d3d3d3")}
 
+}
 
-
-
-
-if (hour < "9"){
-    nine.css("background-color", "#ff6961")
-} else if (hour === "9"){
-    nine.css("background-color", green)
-} else {nine.css("background-color", white)}
-
-if (hour > "10"){
-    ten.css("background-color", "#ff6961")
-} else if (hour === "10"){
-    ten.css("background-color", green)
-} else {ten.css("background-color", white)}
-
-if (hour > "11"){
-    eleven.css("background-color", red)
-} else if (hour === "11"){
-    eleven.css("background-color", green)
-} else {eleven.css("background-color", white)}
-
-if (hour > "12"){
-    twelve.css("background-color", red)
-} else if (hour === "12"){
-    twelve.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-if (hour > "13"){
-    one.css("background-color", red)
-} else if (hour === "13"){
-    one.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-if (hour > "14"){
-    two.css("background-color", red)
-} else if (hour === "14"){
-    two.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-if (hour > "15"){
-    three.css("background-color", red)
-} else if (hour === "15"){
-    three.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-if (hour > "16"){
-    four.css("background-color", red)
-} else if (hour === "16"){
-    four.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-if (hour > "17"){
-    five.css("background-color", red)
-} else if (hour === "17"){
-    five.css("background-color", green)
-} else {twelve.css("background-color", white)}
-
-
-
-////////////
-
-
-
-
-
-
+colors($(".nine"), 9)
+colors($(".ten"), 10)
+colors($(".eleven"), 11)
+colors($(".twelve"), 12)
+colors($(".one"), 13)
+colors($(".two"), 14)
+colors($(".three"), 15)
+colors($(".four"), 16)
+colors($(".five"), 17)
 
 
 ////////////SAVE BUTTONS AND STORAGE/////////////////
@@ -98,13 +38,8 @@ $(".input-" + x).val(saved)
 
 $(".container").on("click", function(event){
     if (event.target.matches("button")){
-        console.log("yay")
-    
     var input = $(".input-" + x).val()
-    
     localStorage.setItem("input" + x, input)
-   
-    console.log(saved)
     
 }
 
