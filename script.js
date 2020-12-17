@@ -20,11 +20,7 @@ var five = $(".five")
 
 
 
-if (hour > "10"){
-    ten.css("background-color", "#ff6961")
-} else if (hour === "10"){
-    ten.css("background-color", green)
-} else {ten.css("background-color", white)}
+
 
 
 
@@ -34,46 +30,51 @@ if (hour < "9"){
     nine.css("background-color", green)
 } else {nine.css("background-color", white)}
 
+if (hour > "10"){
+    ten.css("background-color", "#ff6961")
+} else if (hour === "10"){
+    ten.css("background-color", green)
+} else {ten.css("background-color", white)}
 
 if (hour > "11"){
     eleven.css("background-color", red)
-} else if (hour === "11am"){
+} else if (hour === "11"){
     eleven.css("background-color", green)
 } else {eleven.css("background-color", white)}
 
 if (hour > "12"){
     twelve.css("background-color", red)
-} else if (hour === "12am"){
+} else if (hour === "12"){
     twelve.css("background-color", green)
 } else {twelve.css("background-color", white)}
 
 if (hour > "13"){
     one.css("background-color", red)
-} else if (hour === "13am"){
+} else if (hour === "13"){
     one.css("background-color", green)
 } else {twelve.css("background-color", white)}
 
 if (hour > "14"){
     two.css("background-color", red)
-} else if (hour === "14am"){
+} else if (hour === "14"){
     two.css("background-color", green)
 } else {twelve.css("background-color", white)}
 
 if (hour > "15"){
     three.css("background-color", red)
-} else if (hour === "15am"){
+} else if (hour === "15"){
     three.css("background-color", green)
 } else {twelve.css("background-color", white)}
 
 if (hour > "16"){
     four.css("background-color", red)
-} else if (hour === "16am"){
+} else if (hour === "16"){
     four.css("background-color", green)
 } else {twelve.css("background-color", white)}
 
 if (hour > "17"){
     five.css("background-color", red)
-} else if (hour === "17am"){
+} else if (hour === "17"){
     five.css("background-color", green)
 } else {twelve.css("background-color", white)}
 

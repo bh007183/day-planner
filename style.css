@@ -82,15 +82,15 @@ input {
 .col {
   border-style: solid;
   border-color: grey;
-}
-.btn1 {
   
-  mrgin
 }
 
-.col1{
+.col1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
+}
+.col2 {
   margin-bottom: 2%;
 }
